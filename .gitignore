@@ -1,3 +1,5 @@
 /node_modules
+
 exported_database.sql
-.env
+
+.env*.local
