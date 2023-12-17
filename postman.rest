@@ -1,0 +1,149 @@
+# Jadwal
+
+POST  http://localhost:5000/jadwal
+Content-Type: application/json
+
+{
+    "hari": "Mon"
+}
+
+###
+POST http://localhost:5000/add-matkul
+Content-Type: application/json
+
+{
+    "mata_kuliah" : "Bahasa Indonesia",
+    "dosen": "Supriyadi",
+    "ruangan": "3.4.1",
+    "hari": "Thu",
+    "start_time": "13:25:00",
+    "end_time": "15:25:00"
+}
+
+
+
+# Tugas
+###
+GET  http://localhost:5000/tugas
+Content-Type: application/json
+
+###
+POST http://localhost:5000/add-tugas
+Content-Type: application/json
+
+{
+    "tugas": "Andal kerjakan yang halaman 20",
+    "mata_kuliah": "Analisis Design dan Algoritma",
+    "hari" : "Senin",
+    "start_time": "13:25:00",
+    "start_date" : "2023-12-13 23:25:00",
+    "end_date": "2023-12-15 23:25:00"
+    
+}
+
+###
+DELETE  http://localhost:5000/delete-tugas
+Content-Type: application/json
+
+{
+    "mata_kuliah": "Bahasa Indonesia"
+}
+
+
+# Kuliah Pengganti
+###
+GET http://localhost:5000/jadwalkp
+Content-Type: application/json
+
+###
+POST http://localhost:5000/add-kp
+Content-Type: application/json
+
+{
+    "mata_kuliah": "Bahasa Indoensia",
+    "ruangan" : "3.4.2",
+    "hari" : "Senin",
+    "date" : "2023-12-13 ",
+    "start_time": "13:25:00",
+    "end_time": "13:25:00"
+}
+
+###
+DELETE http://localhost:5000/del-kp
+Content-Type: application/json
+
+{
+    "mata_kuliah": "pti"
+}
+
+
+# Seminar 
+###
+GET http://localhost:5000/seminar
+Content-Type: application/json
+
+
+###
+POST http://localhost:5000/add-seminar
+Content-Type: application/json
+
+{
+    "judul": "Ios Development",
+    "deskripsi": "Lorem Ipsum Dolar Sit amet",
+    "ruangan" : "Ruang Teater",
+    "hari" : "Selasa",
+    "link": "https://www.youtube.com/watch?v=0_R6LjUQZY0",
+    "date": "2023-12-13 ",
+    "time": "13:25:00"
+}
+
+###
+DELETE http://localhost:5000/del-seminar
+Content-Type: application/json
+
+{
+    "judul": "Andriod Development"
+}
+
+
+# Register
+###
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "nama" : "Altaf ",
+    "nim" : "1234567890",
+    "password": "1"
+}
+
+
+# Login
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "nim" : "1234567890",
+    "password": "1"
+}
+
+###
+GET http://localhost:5000/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjI0LCJuYW1hIjoiQWx0YWYgIiwiaWF0IjoxNzAyNjQwNTA3LCJleHAiOjE3MDI2NDA1Njd9.lDtekSvFfdqub-_8cckYmuIGoL3_YTQPmT8P6JBR9qk
+Content-Type: application/json
+
+{
+    "nim" : "1234567890"
+}
+
+###
+DELETE http://localhost:5000/logout
+
+
+
+# Get All Mahasiswa
+###
+GET http://localhost:5000/mahasiswa
+
+
